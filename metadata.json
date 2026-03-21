@@ -1,0 +1,5 @@
+{
+  "name": "Vertex UI Framework",
+  "description": "A scalable, accessible UI framework composed of primitives, headless components, and styled UI components built with Tailwind CSS v4.",
+  "requestFramePermissions": []
+}
