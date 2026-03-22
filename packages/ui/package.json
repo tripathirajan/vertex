@@ -1,5 +1,5 @@
 {
-  "name": "@vertex/ui",
+  "name": "@vertex-lab/ui",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,10 +12,10 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vertex/utilities": "*",
-    "@vertex/hooks": "*",
-    "@vertex/primitives": "*",
-    "@vertex/headless": "*",
+    "@vertex-lab/utilities": "*",
+    "@vertex-lab/hooks": "*",
+    "@vertex-lab/primitives": "*",
+    "@vertex-lab/headless": "*",
     "lucide-react": "^0.546.0"
   },
   "devDependencies": {

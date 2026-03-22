@@ -1,4 +1,4 @@
-import { createContext } from '@vertex/utilities';
+import { createContext } from '@vertex-lab/utilities';
 
 export interface TabsContextValue {
   value?: string;

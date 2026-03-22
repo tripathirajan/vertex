@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { mergeRefs } from '@vertex/utilities';
+import { mergeRefs } from '@vertex-lab/utilities';
 
 /**
  * Portal

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Box } from '@vertex/primitives';
+import { Button, Box } from '@vertex-lab/primitives';
 import { useAccordionContext, useAccordionItemContext } from './AccordionContext';
 
 export type AccordionHeaderProps = React.ComponentPropsWithoutRef<typeof Button>;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '@vertex/primitives';
+import { Button } from '@vertex-lab/primitives';
 import { useTabsContext } from './TabsContext';
 
 export interface TabProps extends React.ComponentPropsWithoutRef<typeof Button> {

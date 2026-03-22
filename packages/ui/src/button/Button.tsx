@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button as PrimitiveButton } from '@vertex/primitives';
+import { Button as PrimitiveButton } from '@vertex-lab/primitives';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<typeof PrimitiveButton> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';

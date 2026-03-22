@@ -16,22 +16,22 @@
     "allowJs": true,
     "jsx": "react-jsx",
     "paths": {
-      "@vertex/utilities": [
+      "@vertex-lab/utilities": [
         "./packages/utilities/src/index.ts"
       ],
-      "@vertex/hooks": [
+      "@vertex-lab/hooks": [
         "./packages/hooks/src/index.ts"
       ],
-      "@vertex/primitives": [
+      "@vertex-lab/primitives": [
         "./packages/primitives/src/index.tsx"
       ],
-      "@vertex/headless": [
+      "@vertex-lab/headless": [
         "./packages/headless/src/index.ts"
       ],
-      "@vertex/ui": [
+      "@vertex-lab/ui": [
         "./packages/ui/src/index.ts"
       ],
-      "@vertex/theme": [
+      "@vertex-lab/theme": [
         "./packages/theme/src/index.tsx"
       ],
       "@/*": [

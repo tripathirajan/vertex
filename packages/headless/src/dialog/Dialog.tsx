@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useControllableState, useId } from '@vertex/hooks';
+import { useControllableState, useId } from '@vertex-lab/hooks';
 import { DialogProvider } from './DialogContext';
 
 export interface DialogProps {

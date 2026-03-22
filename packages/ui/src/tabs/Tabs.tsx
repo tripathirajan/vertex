@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Headless from '@vertex/headless';
+import * as Headless from '@vertex-lab/headless';
 
 export const Tabs = React.forwardRef<HTMLDivElement, Headless.TabsProps>(
   ({ className, ...props }, ref) => (

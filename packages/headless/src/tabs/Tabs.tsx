@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useControllableState, useId } from '@vertex/hooks';
-import { Box } from '@vertex/primitives';
+import { useControllableState, useId } from '@vertex-lab/hooks';
+import { Box } from '@vertex-lab/primitives';
 import { TabsProvider } from './TabsContext';
 
 export interface TabsProps extends React.ComponentPropsWithoutRef<typeof Box> {

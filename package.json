@@ -8,7 +8,7 @@
     "build": "nx run-many -t build",
     "test": "nx run-many -t test",
     "lint": "nx run-many -t lint",
-    "playground": "nx dev @vertex/playground",
+    "playground": "nx dev @vertex-lab/playground",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

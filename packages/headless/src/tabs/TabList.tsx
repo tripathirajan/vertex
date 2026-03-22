@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@vertex/primitives';
+import { Box } from '@vertex-lab/primitives';
 import { useTabsContext } from './TabsContext';
 
 export type TabListProps = React.ComponentPropsWithoutRef<typeof Box>;

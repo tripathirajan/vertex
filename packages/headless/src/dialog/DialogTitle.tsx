@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@vertex/primitives';
+import { Box } from '@vertex-lab/primitives';
 import { useDialogContext } from './DialogContext';
 
 export type DialogTitleProps = React.ComponentPropsWithoutRef<typeof Box>;

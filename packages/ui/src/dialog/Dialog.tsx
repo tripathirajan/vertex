@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Headless from '@vertex/headless';
+import * as Headless from '@vertex-lab/headless';
 import { X } from 'lucide-react';
 
 export const Dialog = Headless.Dialog;

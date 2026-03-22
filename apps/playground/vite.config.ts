@@ -12,12 +12,12 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@vertex/utilities': path.resolve(__dirname, '../../packages/utilities/src/index.ts'),
-        '@vertex/hooks': path.resolve(__dirname, '../../packages/hooks/src/index.ts'),
-        '@vertex/primitives': path.resolve(__dirname, '../../packages/primitives/src/index.tsx'),
-        '@vertex/headless': path.resolve(__dirname, '../../packages/headless/src/index.ts'),
-        '@vertex/ui': path.resolve(__dirname, '../../packages/ui/src/index.ts'),
-        '@vertex/theme': path.resolve(__dirname, '../../packages/theme/src/index.tsx'),
+        '@vertex-lab/utilities': path.resolve(__dirname, '../../packages/utilities/src/index.ts'),
+        '@vertex-lab/hooks': path.resolve(__dirname, '../../packages/hooks/src/index.ts'),
+        '@vertex-lab/primitives': path.resolve(__dirname, '../../packages/primitives/src/index.tsx'),
+        '@vertex-lab/headless': path.resolve(__dirname, '../../packages/headless/src/index.ts'),
+        '@vertex-lab/ui': path.resolve(__dirname, '../../packages/ui/src/index.ts'),
+        '@vertex-lab/theme': path.resolve(__dirname, '../../packages/theme/src/index.tsx'),
         '@': path.resolve(__dirname, '../../'),
       },
     },

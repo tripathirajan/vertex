@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useControllableState } from '@vertex/hooks';
-import { Button } from '@vertex/primitives';
+import { useControllableState } from '@vertex-lab/hooks';
+import { Button } from '@vertex-lab/primitives';
 
 export interface SwitchProps extends React.ComponentPropsWithoutRef<typeof Button> {
   checked?: boolean;

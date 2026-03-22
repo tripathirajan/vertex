@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from '@vertex/primitives';
+import { Box } from '@vertex-lab/primitives';
 import { AccordionItemProvider, useAccordionContext } from './AccordionContext';
 
 export interface AccordionItemProps extends React.ComponentPropsWithoutRef<typeof Box> {

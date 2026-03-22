@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Box, Portal, Button } from '@vertex/primitives';
+import { Box, Portal, Button } from '@vertex-lab/primitives';
 import { useDialogContext } from './DialogContext';
-import { useClickOutside, useEventListener } from '@vertex/hooks';
+import { useClickOutside, useEventListener } from '@vertex-lab/hooks';
 
 export type DialogContentProps = React.ComponentPropsWithoutRef<typeof Box> & {
   asChild?: boolean;

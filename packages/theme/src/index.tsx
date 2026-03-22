@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createContext } from '@vertex/utilities';
+import { createContext } from '@vertex-lab/utilities';
 
 export type Theme = 'light' | 'dark' | 'system';
 

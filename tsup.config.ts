@@ -7,5 +7,5 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   clean: true,
-  external: ['react', 'react-dom', '@vertex/utilities', '@vertex/hooks', '@vertex/primitives', '@vertex/headless', '@vertex/ui', '@vertex/theme'],
+  external: ['react', 'react-dom', '@vertex-lab/utilities', '@vertex-lab/hooks', '@vertex-lab/primitives', '@vertex-lab/headless', '@vertex-lab/ui', '@vertex-lab/theme'],
 });

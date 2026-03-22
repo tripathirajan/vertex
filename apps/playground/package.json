@@ -1,5 +1,5 @@
 {
-  "name": "@vertex/playground",
+  "name": "@vertex-lab/playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vertex/ui": "*",
-    "@vertex/theme": "*",
+    "@vertex-lab/ui": "*",
+    "@vertex-lab/theme": "*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "lucide-react": "^0.546.0",

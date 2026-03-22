@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useControllableState } from '@vertex/hooks';
-import { Box } from '@vertex/primitives';
+import { useControllableState } from '@vertex-lab/hooks';
+import { Box } from '@vertex-lab/primitives';
 import { AccordionProvider } from './AccordionContext';
 
 export interface AccordionProps extends React.ComponentPropsWithoutRef<typeof Box> {

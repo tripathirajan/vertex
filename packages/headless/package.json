@@ -1,5 +1,5 @@
 {
-  "name": "@vertex/headless",
+  "name": "@vertex-lab/headless",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,9 +12,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vertex/utilities": "*",
-    "@vertex/hooks": "*",
-    "@vertex/primitives": "*"
+    "@vertex-lab/utilities": "*",
+    "@vertex-lab/hooks": "*",
+    "@vertex-lab/primitives": "*"
   },
   "devDependencies": {
     "tsup": "^8.0.0",
