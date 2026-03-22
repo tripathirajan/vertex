@@ -27,7 +27,7 @@ export const Checkbox = React.forwardRef<HTMLButtonElement, CheckboxProps>(
     },
     ref
   ) => {
-    const [checked, setChecked] = useControllableState({
+    const [checked, setChecked] = useControllableState<boolean>({
       prop: checkedProp,
       defaultProp: defaultChecked,
       onChange: onCheckedChange,

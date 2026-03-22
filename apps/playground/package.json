@@ -6,18 +6,21 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "init": "pnpm install"
   },
   "dependencies": {
-    "@vertex-lab/ui": "workspace:*",
+    "@vertex-lab/primitives": "workspace:*",
     "@vertex-lab/theme": "workspace:*",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@vertex-lab/ui": "workspace:*",
     "lucide-react": "^0.546.0",
-    "motion": "^12.23.24"
+    "motion": "^12.23.24",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.4",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^6.1.1"
   }
 }

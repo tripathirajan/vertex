@@ -9,10 +9,12 @@
     "build": "tsup --config ../../tsup.config.ts",
     "dev": "tsup --config ../../tsup.config.ts --watch",
     "lint": "eslint src/**/*.{ts,tsx}",
-    "test": "vitest run"
+    "test": "vitest run",
+    "init": "pnpm install"
   },
   "dependencies": {
-    "@vertex-lab/utilities": "workspace:*"
+    "@vertex-lab/utilities": "workspace:*",
+    "@vertex-lab/hooks": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.0",

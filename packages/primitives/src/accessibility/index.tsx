@@ -69,7 +69,7 @@ export const FocusScope = React.forwardRef<HTMLElement, FocusScopeProps & { chil
       };
     }, [trapped, onMountAutoFocus, onUnmountAutoFocus]);
 
-    return <div ref={mergedRef as any}>{children}</div>;
+    return <div ref={mergedRef}>{children}</div>;
   }
 );
 

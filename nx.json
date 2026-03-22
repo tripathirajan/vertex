@@ -18,5 +18,6 @@
   "workspaceLayout": {
     "appsDir": "apps",
     "libsDir": "packages"
-  }
+  },
+  "analytics": false
 }

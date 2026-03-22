@@ -25,7 +25,7 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
     },
     ref
   ) => {
-    const [checked, setChecked] = useControllableState({
+    const [checked, setChecked] = useControllableState<boolean>({
       prop: checkedProp,
       defaultProp: defaultChecked,
       onChange: onCheckedChange,

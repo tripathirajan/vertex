@@ -24,7 +24,7 @@ export function composeEventHandlers<E>(
  * Merges multiple refs into a single ref callback.
  */
 export function mergeRefs<T>(...refs: (React.Ref<T> | undefined)[]) {
-  return (value: T) => {
+  return (value: T | null) => {
     refs.forEach((ref) => {
       if (typeof ref === 'function') {
         ref(value);
@@ -113,7 +113,9 @@ export function createContext<ContextValueType>(
     const context = React.useContext(Context);
     if (context) return context;
     if (defaultContext !== undefined) return defaultContext;
-    throw new Error(`\`${consumerName || rootComponentName}\` must be used within \`${rootComponentName}\``);
+    throw new Error(
+      `\`${consumerName || rootComponentName}\` must be used within \`${rootComponentName}\``
+    );
   }
 
   Context.displayName = rootComponentName + 'Context';
@@ -134,9 +136,15 @@ export function isFocusable(element: HTMLElement): boolean {
   if (!element) return false;
   const nodeName = element.nodeName.toLowerCase();
   const isTabIndexSet = element.hasAttribute('tabindex');
-  const isNotDisabled = !((element as unknown) as { disabled?: boolean }).disabled;
+  const isNotDisabled = !(element as unknown as { disabled?: boolean }).disabled;
 
-  if (nodeName === 'a' || nodeName === 'button' || nodeName === 'input' || nodeName === 'textarea' || nodeName === 'select') {
+  if (
+    nodeName === 'a' ||
+    nodeName === 'button' ||
+    nodeName === 'input' ||
+    nodeName === 'textarea' ||
+    nodeName === 'select'
+  ) {
     return isNotDisabled;
   }
 
