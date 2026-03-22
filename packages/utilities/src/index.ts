@@ -76,7 +76,7 @@ export function throttle<T extends (...args: any[]) => any>(
 /**
  * Deep merges multiple objects.
  */
-export function deepMerge<T extends object>(target: T, ...sources: any[]): T {
+export function deepMerge<T extends Record<string, any>>(target: T, ...sources: any[]): T {
   if (!sources.length) return target;
   const source = sources.shift();
 
@@ -94,8 +94,8 @@ export function deepMerge<T extends object>(target: T, ...sources: any[]): T {
   return deepMerge(target, ...sources);
 }
 
-function isObject(item: any): item is object {
-  return item && typeof item === 'object' && !Array.isArray(item);
+function isObject(item: any): item is Record<string, any> {
+  return !!item && typeof item === 'object' && !Array.isArray(item);
 }
 
 /**

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as Headless from '@vertex/headless';
 import { X } from 'lucide-react';
-import { Button } from '../button/Button';
 
 export const Dialog = Headless.Dialog;
 

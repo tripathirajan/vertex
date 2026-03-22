@@ -39,7 +39,7 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
           }
         } else {
           if (value.includes(itemValue)) {
-            setValue(value.filter((v) => v !== itemValue));
+            setValue(value.filter((v: string) => v !== itemValue));
           } else {
             setValue([...value, itemValue]);
           }

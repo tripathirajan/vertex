@@ -46,10 +46,11 @@ Primitive.displayName = 'Primitive';
 export const Slot = React.forwardRef<any, React.HTMLAttributes<HTMLElement> & { children?: React.ReactNode }>(
   ({ children, ...props }, ref) => {
     if (React.isValidElement(children)) {
-      return React.cloneElement(children, {
+      const child = children as React.ReactElement<any>;
+      return React.cloneElement(child, {
         ...props,
-        ...children.props,
-        ref: ref ? mergeRefs(ref, (children as any).ref) : (children as any).ref,
+        ...child.props,
+        ref: ref ? mergeRefs(ref, (child as any).ref) : (child as any).ref,
       } as any);
     }
 
@@ -63,9 +64,7 @@ Slot.displayName = 'Slot';
  * Core Primitives
  */
 
-export const Box = React.forwardRef<HTMLDivElement, PrimitiveComponentProps<'div'>>(
-  (props, ref) => <Primitive {...props} ref={ref} />
-);
+export const Box = Primitive;
 Box.displayName = 'Box';
 
 export const Button = React.forwardRef<HTMLButtonElement, PrimitiveComponentProps<'button'>>(

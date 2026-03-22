@@ -30,7 +30,7 @@ export function useMounted() {
  * Stores the previous value of a variable.
  */
 export function usePrevious<T>(value: T): T | undefined {
-  const ref = React.useRef<T>();
+  const ref = React.useRef<T>(undefined);
   React.useEffect(() => {
     ref.current = value;
   }, [value]);

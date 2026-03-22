@@ -1,0 +1,24 @@
+{
+  "name": "@vertex/theme",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup --config ../../tsup.config.ts",
+    "dev": "tsup --config ../../tsup.config.ts --watch",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vertex/utilities": "*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "~5.8.2",
+    "vitest": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
