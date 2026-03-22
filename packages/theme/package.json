@@ -12,7 +12,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vertex-lab/utilities": "*"
+    "@vertex-lab/utilities": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.0",

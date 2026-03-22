@@ -12,10 +12,10 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vertex-lab/utilities": "*",
-    "@vertex-lab/hooks": "*",
-    "@vertex-lab/primitives": "*",
-    "@vertex-lab/headless": "*",
+    "@vertex-lab/utilities": "workspace:*",
+    "@vertex-lab/hooks": "workspace:*",
+    "@vertex-lab/primitives": "workspace:*",
+    "@vertex-lab/headless": "workspace:*",
     "lucide-react": "^0.546.0"
   },
   "devDependencies": {

@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vertex-lab/ui": "*",
-    "@vertex-lab/theme": "*",
+    "@vertex-lab/ui": "workspace:*",
+    "@vertex-lab/theme": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "lucide-react": "^0.546.0",

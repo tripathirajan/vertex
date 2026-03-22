@@ -12,9 +12,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vertex-lab/utilities": "*",
-    "@vertex-lab/hooks": "*",
-    "@vertex-lab/primitives": "*"
+    "@vertex-lab/utilities": "workspace:*",
+    "@vertex-lab/hooks": "workspace:*",
+    "@vertex-lab/primitives": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.0",
