@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box } from '@vertex/primitives';
 import { useAccordionItemContext } from './AccordionContext';
 
-export interface AccordionPanelProps extends React.ComponentPropsWithoutRef<typeof Box> {}
+export type AccordionPanelProps = React.ComponentPropsWithoutRef<typeof Box>;
 
 export const AccordionPanel = React.forwardRef<HTMLDivElement, AccordionPanelProps>(
   ({ children, ...props }, ref) => {

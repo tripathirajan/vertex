@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Box, Portal } from '@vertex/primitives';
+import { Box, Portal, Button } from '@vertex/primitives';
 import { useDialogContext } from './DialogContext';
 import { useClickOutside, useEventListener } from '@vertex/hooks';
 
-export interface DialogContentProps extends React.ComponentPropsWithoutRef<typeof Box> {
+export type DialogContentProps = React.ComponentPropsWithoutRef<typeof Box> & {
   asChild?: boolean;
-}
+};
 
 export const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps>(
   ({ children, ...props }, ref) => {
@@ -72,7 +72,9 @@ export const DialogOverlay = React.forwardRef<HTMLDivElement, React.ComponentPro
 
 DialogOverlay.displayName = 'DialogOverlay';
 
-export const DialogTrigger = React.forwardRef<HTMLButtonElement, React.ComponentPropsWithoutRef<'button'>>(
+export type DialogTriggerProps = React.ComponentPropsWithoutRef<typeof Button>;
+
+export const DialogTrigger = React.forwardRef<HTMLButtonElement, DialogTriggerProps>(
   ({ onClick, ...props }, ref) => {
     const { onOpenChange } = useDialogContext('DialogTrigger');
 
@@ -81,7 +83,7 @@ export const DialogTrigger = React.forwardRef<HTMLButtonElement, React.Component
       onOpenChange(true);
     };
 
-    return <button {...props} ref={ref} onClick={handleClick} />;
+    return <Button {...props} ref={ref} onClick={handleClick} />;
   }
 );
 

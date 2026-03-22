@@ -45,7 +45,7 @@ export function clamp(value: number, min: number, max: number) {
 /**
  * Debounces a function.
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   fn: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -59,7 +59,7 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttles a function.
  */
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   fn: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -76,7 +76,7 @@ export function throttle<T extends (...args: any[]) => any>(
 /**
  * Deep merges multiple objects.
  */
-export function deepMerge<T extends Record<string, any>>(target: T, ...sources: any[]): T {
+export function deepMerge<T extends Record<string, unknown>>(target: T, ...sources: unknown[]): T {
   if (!sources.length) return target;
   const source = sources.shift();
 
@@ -84,7 +84,7 @@ export function deepMerge<T extends Record<string, any>>(target: T, ...sources: 
     for (const key in source) {
       if (isObject(source[key])) {
         if (!target[key]) Object.assign(target, { [key]: {} });
-        deepMerge(target[key], source[key]);
+        deepMerge(target[key] as Record<string, unknown>, source[key] as Record<string, unknown>);
       } else {
         Object.assign(target, { [key]: source[key] });
       }
@@ -94,7 +94,7 @@ export function deepMerge<T extends Record<string, any>>(target: T, ...sources: 
   return deepMerge(target, ...sources);
 }
 
-function isObject(item: any): item is Record<string, any> {
+function isObject(item: unknown): item is Record<string, unknown> {
   return !!item && typeof item === 'object' && !Array.isArray(item);
 }
 
@@ -123,7 +123,7 @@ export function createContext<ContextValueType>(
 /**
  * Checks if a value is an HTMLElement.
  */
-export function isHTMLElement(element: any): element is HTMLElement {
+export function isHTMLElement(element: unknown): element is HTMLElement {
   return element instanceof HTMLElement;
 }
 
@@ -134,7 +134,7 @@ export function isFocusable(element: HTMLElement): boolean {
   if (!element) return false;
   const nodeName = element.nodeName.toLowerCase();
   const isTabIndexSet = element.hasAttribute('tabindex');
-  const isNotDisabled = !(element as any).disabled;
+  const isNotDisabled = !((element as unknown) as { disabled?: boolean }).disabled;
 
   if (nodeName === 'a' || nodeName === 'button' || nodeName === 'input' || nodeName === 'textarea' || nodeName === 'select') {
     return isNotDisabled;

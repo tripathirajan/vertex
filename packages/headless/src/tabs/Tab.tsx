@@ -8,7 +8,7 @@ export interface TabProps extends React.ComponentPropsWithoutRef<typeof Button> 
 }
 
 export const Tab = React.forwardRef<HTMLButtonElement, TabProps>(
-  ({ value, disabled, onFocus, onClick, onKeyDown, ...props }, ref) => {
+  ({ value, disabled, onFocus, onClick, ...props }, ref) => {
     const { value: selectedValue, onValueChange, orientation, activationMode, baseId } = useTabsContext('Tab');
     const isSelected = selectedValue === value;
     const tabId = `${baseId}-tab-${value}`;

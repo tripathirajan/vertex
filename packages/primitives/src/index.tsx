@@ -27,10 +27,12 @@ export type PrimitiveComponentProps<E extends React.ElementType> = PrimitiveProp
   Omit<React.ComponentPropsWithRef<E>, keyof PrimitiveProps<E>>;
 
 export const Primitive = React.forwardRef(
-  <E extends React.ElementType = 'div',>(
+  <E extends React.ElementType = 'div'>(
     { as, asChild, ...props }: PrimitiveComponentProps<E>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ref: React.Ref<any>
   ) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const Component: any = asChild ? Slot : as || 'div';
 
     return <Component {...props} ref={ref} />;
@@ -43,14 +45,18 @@ Primitive.displayName = 'Primitive';
  * Slot
  * Merges its props onto its immediate child.
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const Slot = React.forwardRef<any, React.HTMLAttributes<HTMLElement> & { children?: React.ReactNode }>(
   ({ children, ...props }, ref) => {
     if (React.isValidElement(children)) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const child = children as React.ReactElement<any>;
       return React.cloneElement(child, {
         ...props,
         ...child.props,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ref: ref ? mergeRefs(ref, (child as any).ref) : (child as any).ref,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } as any);
     }
 

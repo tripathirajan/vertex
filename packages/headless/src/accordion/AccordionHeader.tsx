@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Box } from '@vertex/primitives';
 import { useAccordionContext, useAccordionItemContext } from './AccordionContext';
 
-export interface AccordionHeaderProps extends React.ComponentPropsWithoutRef<typeof Button> {}
+export type AccordionHeaderProps = React.ComponentPropsWithoutRef<typeof Button>;
 
 export const AccordionHeader = React.forwardRef<HTMLButtonElement, AccordionHeaderProps>(
   ({ onClick, ...props }, ref) => {

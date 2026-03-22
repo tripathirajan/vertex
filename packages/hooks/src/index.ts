@@ -30,11 +30,19 @@ export function useMounted() {
  * Stores the previous value of a variable.
  */
 export function usePrevious<T>(value: T): T | undefined {
-  const ref = React.useRef<T>(undefined);
-  React.useEffect(() => {
-    ref.current = value;
-  }, [value]);
-  return ref.current;
+  const [state, setState] = React.useState<{ prev: T | undefined; curr: T }>({
+    prev: undefined,
+    curr: value,
+  });
+
+  if (value !== state.curr) {
+    setState({
+      prev: state.curr,
+      curr: value,
+    });
+  }
+
+  return state.prev;
 }
 
 /**
@@ -76,11 +84,13 @@ export function useToggle(initialValue = false) {
  * useStableCallback
  * Returns a stable callback that always has access to the latest props/state.
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useStableCallback<T extends (...args: any[]) => any>(callback: T | undefined): T {
   const callbackRef = React.useRef(callback);
   useIsomorphicLayoutEffect(() => {
     callbackRef.current = callback;
   });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return React.useCallback((...args: any[]) => callbackRef.current?.(...args), []) as T;
 }
 
@@ -107,6 +117,7 @@ export function useEventListener<K extends keyof WindowEventMap>(
     const targetElement: EventTarget = element;
     if (!targetElement.addEventListener) return;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const eventListener = (event: Event) => savedHandler(event as any);
     targetElement.addEventListener(eventName, eventListener, options);
 
@@ -235,7 +246,7 @@ export function useIntersectionObserver<T extends HTMLElement>(
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [ref, options.root, options.rootMargin, options.threshold, savedCallback]);
+  }, [ref, options, savedCallback]);
 
   return entry;
 }
@@ -249,7 +260,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
+    } catch {
       return initialValue;
     }
   });

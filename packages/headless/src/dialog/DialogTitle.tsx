@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box } from '@vertex/primitives';
 import { useDialogContext } from './DialogContext';
 
-export interface DialogTitleProps extends React.ComponentPropsWithoutRef<typeof Box> {}
+export type DialogTitleProps = React.ComponentPropsWithoutRef<typeof Box>;
 
 export const DialogTitle = React.forwardRef<HTMLHeadingElement, DialogTitleProps>(
   (props, ref) => {
