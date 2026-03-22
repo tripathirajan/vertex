@@ -19,7 +19,9 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@storybook/test": "^8.6.15",
     "@vitejs/plugin-react": "^5.0.4",
+    "tailwindcss": "^4.2.2",
     "vite": "^6.2.0",
     "vite-tsconfig-paths": "^6.1.1"
   }
